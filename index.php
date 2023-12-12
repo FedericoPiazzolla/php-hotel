@@ -46,6 +46,12 @@ if (isset($_GET['parking']) && $_GET['parking'] !== 'All') {
   });
 
 };
+
+if (isset($_GET['vote']) && $_GET['vote'] !== '') {
+  $hotelfiltered = array_filter($hotelfiltered, function($hotel) {
+    return $hotel['vote'] >= intval($_GET['vote']);
+  });
+};
 ?>
 
 <!DOCTYPE html>
@@ -78,6 +84,8 @@ if (isset($_GET['parking']) && $_GET['parking'] !== 'All') {
         <!-- /filtro per parcheggio incluso -->
 
         <!-- Filtro per scegliere la valutazione -->
+        <label for="vote">Filter by Vote:</label>
+        <input type="number" name="vote" id="vote" class="form-control" min="1" max="5">
         <!-- /filtro per la valutazione -->
 
         <button type="submit" class="btn btn-primary mt-3 mb-3">Apply Filters</button>
