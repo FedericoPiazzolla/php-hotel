@@ -64,6 +64,9 @@ if (isset($_GET['vote']) && $_GET['vote'] !== '') {
 
   <!-- Bootstap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- my-style -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -88,7 +91,7 @@ if (isset($_GET['vote']) && $_GET['vote'] !== '') {
         <input type="number" name="vote" id="vote" class="form-control" min="1" max="5">
         <!-- /filtro per la valutazione -->
 
-        <button type="submit" class="btn btn-primary mt-3 mb-3">Apply Filters</button>
+        <button type="submit" class="btn btn-light mt-3 mb-3">Apply Filters</button>
       </form>
     </section>
     <!-- /form section -->
